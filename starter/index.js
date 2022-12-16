@@ -86,3 +86,27 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+var numMonths = finances.length;
+var runningTotal = 0;
+
+// TITLE OF APP
+
+console.log("Financial Analysis");
+console.log("*****************");
+
+// TOTAL MONTHS ANALYSED
+
+var totalMonths = finances.length;
+console.log("Total Months: " + totalMonths);
+
+//NET TOTAL PROFIT/LOSSES
+
+for (var i = 0; i < finances.length; i++) {
+    var netProfLoss = runningTotal + finances[i][1];
+} console.log("Net Total Profit/Losses: $" + netProfLoss);
+
+// AVERAGE CHANGE 
+
+var avgChange = ((netProfLoss / numMonths).toFixed(2));
+console.log("Average Change: $" + avgChange);
