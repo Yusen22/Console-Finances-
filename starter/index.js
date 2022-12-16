@@ -88,7 +88,7 @@ var finances = [
 ];
 
 var numMonths = finances.length;
-var runningTotal = 0;
+var netProfLoss = 0;
 
 // TITLE OF APP
 
@@ -103,8 +103,8 @@ console.log("Total Months: " + totalMonths);
 //NET TOTAL PROFIT/LOSSES
 
 for (var i = 0; i < finances.length; i++) {
-    var netProfLoss = runningTotal + finances[i][1];
-} console.log("Net Total Profit/Losses: $" + netProfLoss);
+    netProfLoss += finances[i][1];
+} console.log("Net Total Profit/Losses: $" + runningTotal);
 
 // AVERAGE CHANGE 
 
