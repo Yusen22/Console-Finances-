@@ -104,9 +104,9 @@ console.log("Total Months: " + totalMonths);
 
 for (var i = 0; i < finances.length; i++) {
     netProfLoss += finances[i][1];
-} console.log("Net Total Profit/Losses: $" + runningTotal);
+} console.log("Net Total Profit/Losses: $" + netProfLoss);
 
 // AVERAGE CHANGE 
 
 var avgChange = ((netProfLoss / numMonths).toFixed(2));
-console.log("Average Change: $" + avgChange);
+console.log("Average Monthly Change: $" + avgChange);
