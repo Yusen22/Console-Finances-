@@ -87,8 +87,11 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-var numMonths = finances.length;
+var totalMonths = finances.length;
 var netProfLoss = 0;
+var runningChange = 0;
+var grtProf = 0; 
+var lstProf = 0;
 
 // TITLE OF APP
 
@@ -97,16 +100,39 @@ console.log("*****************");
 
 // TOTAL MONTHS ANALYSED
 
-var totalMonths = finances.length;
 console.log("Total Months: " + totalMonths);
 
 //NET TOTAL PROFIT/LOSSES
 
-for (var i = 0; i < finances.length; i++) {
+for (var i = 0; i < totalMonths; i++) {
     netProfLoss += finances[i][1];
 } console.log("Net Total Profit/Losses: $" + netProfLoss);
 
 // AVERAGE CHANGE 
 
-var avgChange = ((netProfLoss / numMonths).toFixed(2));
-console.log("Average Monthly Change: $" + avgChange);
+for (var j = 1; j < totalMonths; ++j) {
+    runningChange += (finances[j][1] - finances[j-1][1]);
+} var avgTotalChange = ((runningChange / (totalMonths - 1)).toFixed(2));
+console.log("Average Total Change: $" + avgTotalChange);
+
+
+
+
+
+
+
+
+
+// for(j = 1; j <  )
+
+
+// var avgChange = ((netProfLoss / numMonths).toFixed(2));
+// console.log("Average Monthly Change: $" + avgChange);
+
+// GREATEST INCREASE IN PROFITS
+
+// for(var i = 0; i < finances.length; i++) {
+//    if(finances[i][1] < finances[i = i+1][1]);
+//    grtProf += finances[i=i+1][1]
+// } 
+
