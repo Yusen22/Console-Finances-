@@ -115,42 +115,22 @@ for (var i = 0; i < totalMonths; i++) {
 for (var j = 1; j < totalMonths; ++j) {
     var changeSum = (finances[j][1] - finances[j - 1][1]);
     runningChange += changeSum;
+    // IF LOOPS FOR GREATEST/LEAST CHANGE IN PROFIT
     if (changeSum > grtProf) {
         var currentMonth = (finances[j][0]);
-        console.log("the month is: " + currentMonth);
         grtProf = changeSum;
-        fullGrtProf = currentMonth + grtProf;
+        fullGrtProf = currentMonth + " ($" + grtProf + ")";
     } else if (changeSum < lstProf) {
         var currentMonth = (finances[j][0]);
         lstProf = changeSum;
-        fullLstProf = currentMonth + lstProf;
+        fullLstProf = currentMonth + " ($" + lstProf + ")";
     }
-} var avgTotalChange = ((runningChange / (totalMonths - 1)).toFixed(2));
+} 
+
+var avgTotalChange = ((runningChange / (totalMonths - 1)).toFixed(2));
+
 console.log("Average Total Change: $" + avgTotalChange);
 console.log("Greatest Increase In Profit: " + fullGrtProf);
 console.log("Greatest Decrease In Profit: " + fullLstProf);
 
-
-
-
-// for (var j = 1; j < totalMonths; ++j) {
-//     if(finances[j][1] - finances[j-1][1]);
-// }
-
-
-
-
-
-// for(j = 1; j <  )
-
-
-// var avgChange = ((netProfLoss / numMonths).toFixed(2));
-// console.log("Average Monthly Change: $" + avgChange);
-
-// GREATEST INCREASE IN PROFITS
-
-// for(var i = 0; i < finances.length; i++) {
-//    if(finances[i][1] < finances[i = i+1][1]);
-//    grtProf += finances[i=i+1][1]
-// } 
 
