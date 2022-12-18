@@ -28,6 +28,12 @@ Press CTRL + SHFT + I (Windows) or CMD + SHFT + I (Mac OS) to open the Chrome De
 
 Call the 'finances' variable by inputting 'finances' into the console. Press 'Enter' and engage the drop-down to the left of the array to view the data analysed in the application. 
 
+To add monthly data to the data set, enter `finances.push(["MMM YYYY", 00000]);` into the console in the displayed format.
+
+To remove the last set of data, enter `finances.pop()` into the console.
+
+To remove the first set of data, enter `finances.shift()` into the console.
+
 
 ## Credits
 
